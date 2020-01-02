@@ -8,6 +8,7 @@ const { startCompileProcess } = require('./compile');
 const { startWatch } = require('./watch');
 const { cleanUp } = require('./clean');
 const { createProject } = require('./create');
+const { startServe } = require('./serve')
 
 program
   .option('-c --compile', 'Compile Project')
@@ -15,6 +16,7 @@ program
   .option('-w --watch', 'Watch & Compile')
   .option('-cl --clean', 'Clean Up')
   .option('-cp --createProject', 'Create Project')
+  .option('-s --serve', 'Sever Project')
   .parse(process.argv);
 
 clear();
@@ -39,6 +41,10 @@ if (program.watch) {
 
 if (program.clean) {
   cleanUp();
+}
+
+if (program.serve) {
+  startServe();
 }
 
 if (program.createProject) {

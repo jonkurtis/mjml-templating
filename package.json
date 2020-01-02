@@ -12,6 +12,7 @@
     "create-project": "node ./scripts/index.js --createProject",
     "compile-all": "node ./scripts/index.js --compileAll",
     "watch": "node ./scripts/index.js --watch",
+    "serve": "node ./scripts/index.js --serve",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
   },
@@ -34,6 +35,7 @@
     "babel-core": "^6.26.0",
     "babel-jest": "^22.2.2",
     "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.26.7",
     "chalk": "^2.3.1",
     "clear": "^0.1.0",
     "commander": "^2.14.1",
