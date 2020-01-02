@@ -10,21 +10,39 @@ const { projects } = require('../projects.config');
 const { pickProject } = require('./inquirer');
 let currentProject;
 
-function compileTemplate(mjmlRaw, project) {
+function compileMjml(mjmlRaw, project) {
   return new Promise((resolve, reject) => {
-    const compiled = mjml(mjmlRaw, {
+    const template = mjml(mjmlRaw, {
       validationLevel: 'strict',
       minify: true,
       filePath: path.join(__dirname, `../${project}/templates/', '*.mjml`)
     });
-    if (compiled.errors.length) {
-      console.log(compiled.errors);
+    if (template.errors.length) {
+      console.log(template.errors);
       reject(new Error('Issue Compiling'));
     }
 
-    resolve(compiled);
+    resolve(template);
   });
 }
+
+function injectVars(template, vars = {}) {
+  return new Promise((resolve, reject) => {
+    let compiled
+     Object.keys(vars).forEach((key) => {
+       const regex = new RegExp(`{{${key}}}`, 'g');
+       template.html = template.html.replace(regex, vars[key]);
+       compiled = template;
+      });
+     resolve(compiled);
+   });
+ };
+
+  async function compileTemplate(mjmlRaw, project) {
+    const template = await compileMjml(mjmlRaw, project);
+    const compiled = await injectVars(template, {message: 'Hello George!'});
+    return compiled;
+  }
 
 function getMjmlTemplatePaths(globString, options = {}) {
   return new Promise((resolve, reject) => {
