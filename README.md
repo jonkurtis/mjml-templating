@@ -114,11 +114,9 @@ mjml-multi-project/
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-
 <!-- prettier-ignore -->
-| [<img src="https://avatars1.githubusercontent.com/u/13333582?v=4" width="100px;"/><br /><sub><b>Gary Meehan</b></sub>](https://github.com/garmeeh)<br />[💬](#question-garmeeh "Answering Questions") [📝](#blog-garmeeh "Blogposts") [💻](https://github.com/garmeeh/mjml-multi-project/commits?author=garmeeh "Code") [🎨](#design-garmeeh "Design") [📖](https://github.com/garmeeh/mjml-multi-project/commits?author=garmeeh "Documentation") [💡](#example-garmeeh "Examples") [🤔](#ideas-garmeeh "Ideas, Planning, & Feedback") [🚇](#infra-garmeeh "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/garmeeh/mjml-multi-project/commits?author=garmeeh "Tests") [🔧](#tool-garmeeh "Tools") [✅](#tutorial-garmeeh "Tutorials") |
-| :---: |
-
+| [<img src="https://avatars1.githubusercontent.com/u/13333582?v=4" width="100px;"/><br /><sub><b>Gary Meehan</b></sub>](https://github.com/garmeeh)<br />[💬](#question-garmeeh "Answering Questions") [📝](#blog-garmeeh "Blogposts") [💻](https://github.com/garmeeh/mjml-multi-project/commits?author=garmeeh "Code") [🎨](#design-garmeeh "Design") [📖](https://github.com/garmeeh/mjml-multi-project/commits?author=garmeeh "Documentation") [💡](#example-garmeeh "Examples") [🤔](#ideas-garmeeh "Ideas, Planning, & Feedback") [🚇](#infra-garmeeh "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/garmeeh/mjml-multi-project/commits?author=garmeeh "Tests") [🔧](#tool-garmeeh "Tools") [✅](#tutorial-garmeeh "Tutorials") | [<img src="https://avatars3.githubusercontent.com/u/19523925?v=4" width="100px;"/><br /><sub><b>jonkurtis</b></sub>](https://github.com/jonkurtis)<br />[💻](https://github.com/garmeeh/mjml-multi-project/commits?author=jonkurtis "Code") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
