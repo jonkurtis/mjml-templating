@@ -42,3 +42,8 @@ build
 
 # WIP
 scripts/publish.js
+
+# Projects folder
+projects
+# But not the "cuppas" example project
+!projects/cuppas
