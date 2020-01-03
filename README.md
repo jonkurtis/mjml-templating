@@ -35,7 +35,7 @@ yarn create-project "newproject"
 
 You will need to add your new project to `projects` in `projects.config.js`.
 
-This will create the following folder structure:
+This will create the following folder structure inside the `projects` directory:
 
 ```
 ├── newproject/                     * new project
@@ -86,10 +86,11 @@ Running this will remove the sample project and git.
 
 ```
 mjml-multi-project/
- ├── cuppas/                        * example project
- |   ├── common                     * directory to hold partial includes for templates
- |   ├── COMPILED_TEMPLATES         * output folder for this projects templates (.html)
- |   ├── templates                  * mjml template files
+ ├── projects/                      * projects directory
+ |   ├── cuppas/                    * example project
+ |       ├── common                 * directory to hold partial includes for templates
+ |       ├── COMPILED_TEMPLATES     * output folder for this projects templates (.html)
+ |       ├── templates              * mjml template files
  │
  ├── scripts/
  |   ├── index.js                   *
