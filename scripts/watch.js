@@ -6,7 +6,7 @@ const { startCompileProcess } = require('./compile');
 
 const startWatch = async () => {
   const { project } = await pickProject();
-  const templatePath = `../${project}/templates/`;
+  const templatePath = `../projects/${project}/templates/`;
 
   watch(path.resolve(__dirname, templatePath), {}, (evt, filePath) => {
     log.ok(`Recompiling: ${filePath}`);

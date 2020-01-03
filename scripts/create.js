@@ -6,7 +6,7 @@ const log = require('../tools/logger');
 function createProject(projectName) {
   const cleanProjectName = projectName.toLowerCase().replace(/[^a-zA-Z]/g, '');
   const rootPath = path.resolve(__dirname, '../');
-  const newProjectPath = `${rootPath}/${cleanProjectName}`;
+  const newProjectPath = `${rootPath}/projects/${cleanProjectName}`;
   const directoriesToCreate = ['', 'templates', 'COMPILED_TEMPLATES', 'common'];
 
   if (fs.existsSync(newProjectPath)) {

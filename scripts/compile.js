@@ -15,7 +15,7 @@ function compileMjml(mjmlRaw, project) {
     const template = mjml(mjmlRaw, {
       validationLevel: 'strict',
       minify: true,
-      filePath: path.join(__dirname, `../${project}/templates/', '*.mjml`)
+      filePath: path.join(__dirname, `../projects/${project}/templates/', '*.mjml`)
     });
     if (template.errors.length) {
       console.log(template.errors);
@@ -109,7 +109,7 @@ function writeFiles(compiledFiles = [], pathToWriteTo) {
     compiledFiles.map(async file => {
       try {
         await writeFileAsync(
-          `${file.project}/COMPILED_TEMPLATES/${file.name}.html`,
+          `projects/${file.project}/COMPILED_TEMPLATES/${file.name}.html`,
           file.body.html
         );
       } catch (error) {
@@ -146,7 +146,7 @@ const startCompileProcess = async (
   try {
     const mjmlTemplatePaths = singleTemplatePath
       ? [singleTemplatePath]
-      : await getMjmlTemplatePaths(`${currentProject}/templates/*.mjml`, {
+      : await getMjmlTemplatePaths(`projects/${currentProject}/templates/*.mjml`, {
         ignore: 'test-*/**' // ignore is for a test directory to be added later
       });
     const mjmlRawTemplates = await getMjmlRawTemplates(mjmlTemplatePaths);

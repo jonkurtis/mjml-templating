@@ -8,8 +8,8 @@ const bs = require('browser-sync').create();
 const startServe = async () => {
   const hrstart = process.hrtime();
   const { project } = await pickProject();
-  const templatePath = `../${project}/templates/`;
-  const projectPath = `${project}/COMPILED_TEMPLATES/`;
+  const templatePath = `../projects/${project}/templates/`;
+  const projectPath = `projects/${project}/COMPILED_TEMPLATES/`;
   bs.init({
     server: {
       baseDir: projectPath,
