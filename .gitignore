@@ -44,6 +44,6 @@ build
 scripts/publish.js
 
 # Projects folder
-projects
+projects/*
 # But not the "cuppas" example project
 !projects/cuppas
