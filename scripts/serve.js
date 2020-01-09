@@ -1,15 +1,16 @@
 const watch = require('node-watch');
 const path = require('path');
 const log = require('../tools/logger');
-const { pickProject } = require('./inquirer');
+const { pickProject, pickMonth } = require('./inquirer');
 const { startCompileProcess } = require('./compile');
 const bs = require('browser-sync').create();
 
 const startServe = async () => {
   const hrstart = process.hrtime();
   const { project } = await pickProject();
-  const templatePath = `../projects/${project}/templates/`;
-  const projectPath = `projects/${project}/COMPILED_TEMPLATES/`;
+  const month = await pickMonth();
+  const templatePath = `../projects/${project}/templates/${month}`;
+  const projectPath = `projects/${project}/COMPILED_TEMPLATES/${month}`;
   bs.init({
     server: {
       baseDir: projectPath,

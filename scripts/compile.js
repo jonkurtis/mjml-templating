@@ -7,7 +7,7 @@ const readFileAsync = promisify(fs.readFile);
 const writeFileAsync = promisify(fs.writeFile);
 const log = require('../tools/logger');
 const { projects } = require('../projects.config');
-const { pickProject } = require('./inquirer');
+const { pickProject, pickMonth } = require('./inquirer');
 let currentProject;
 
 function compileMjml(mjmlRaw, project) {
@@ -136,7 +136,7 @@ const startCompileProcess = async (
   } else if (project === 'all') {
     currentProject = '**';
   }
-
+  const month = await pickMonth();
   log.info(
     `${
       currentProject !== '**' ? currentProject : 'All Projects'
@@ -146,7 +146,7 @@ const startCompileProcess = async (
   try {
     const mjmlTemplatePaths = singleTemplatePath
       ? [singleTemplatePath]
-      : await getMjmlTemplatePaths(`projects/${currentProject}/templates/*.mjml`, {
+      : await getMjmlTemplatePaths(`projects/${currentProject}/templates/${month}*.mjml`, {
         ignore: 'test-*/**' // ignore is for a test directory to be added later
       });
     const mjmlRawTemplates = await getMjmlRawTemplates(mjmlTemplatePaths);
